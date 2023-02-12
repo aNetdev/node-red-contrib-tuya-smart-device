@@ -202,6 +202,7 @@ module.exports = function (RED) {
     const sendDeviceConnectStatus = (data) => {
       return {
         payload: {
+          deviceId: node.deviceId,
           state: node.deviceStatus,
           ...data,
         },
